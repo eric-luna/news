@@ -1,0 +1,33 @@
+<div ng-controller="GeneralCtrl as general">
+    <div class="select-menu">
+        <select onChange="window.location.href=this.value">
+            <option value="#!/general">General</option>
+            <option value="#!/view2">Science/Tech</option>
+            <option value="#!/view2">Entertainment</option>
+            <option value="#!/view2">Sports</option>
+            <option value="#!/view2">Business</option>
+        </select>
+        <select                                               
+        ng-model="general.initial"
+        ng-options="source.source as source.name for source in general.sources"
+        ng-change="general.changeSource(general.initial)"
+         ></select>
+    </div>
+    <div class="content">
+        <div class="news-list">
+        	<h2>Top Headlines From <span>{{general.currentSource}}</span></h2>
+            <ul ng-repeat="article in general.headlines">
+                <li>
+                    <h3><a ng-href="{{article.url}}" target="_blank">{{article.title}}</a></h3></li>
+                <li><img ng-src="{{article.urlToImage}}"></li>
+                <li class="description">{{article.description}}</li>
+            </ul>
+        </div>
+        <div class="sources">
+        	<h2>News Providers:</h2>
+            <ul ng-repeat="source in general.sources">
+                <li ng-click="general.changeSource(source.source, source.name)">{{source.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
