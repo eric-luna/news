@@ -29,7 +29,13 @@ html {
   margin: auto;
   font-family: 'Questrial', sans-serif; }
   .select-menu select {
-    width: 49.25%; }
+    width: 49%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    outline: none; }
+    .select-menu select option:hover {
+      background-color: #fff; }
 
 .menu {
   display: none; }
@@ -41,7 +47,8 @@ html {
 
 .active-side {
   background: #fff;
-  color: #000 !important; }
+  color: #000 !important;
+  border-radius: 3px; }
 
 .content {
   display: flex;
@@ -95,7 +102,7 @@ footer {
       font-weight: bold;
       text-decoration: none; }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 900px) {
   .select-menu {
     display: none; }
 

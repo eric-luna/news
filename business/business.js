@@ -15,7 +15,6 @@ angular.module('myApp.business', ['ngRoute'])
 	self.currentSource = 'Bloomberg';
     self.select = '#!/business';
     self.currentPage = function(href){
-        alert(href);
         window.location.href=href;
     } 
 

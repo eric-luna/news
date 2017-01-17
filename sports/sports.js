@@ -15,7 +15,6 @@ angular.module('myApp.sports', ['ngRoute'])
 	self.currentSource = 'ESPN';
     self.select = '#!/sports';
     self.currentPage = function(href){
-        alert(href);
         window.location.href=href;
     } 
 

@@ -15,7 +15,6 @@ angular.module('myApp.science', ['ngRoute'])
 	self.currentSource = 'New Scientist';
     self.select = '#!/science';
     self.currentPage = function(href){
-        alert(href);
         window.location.href=href;
     } 
 
