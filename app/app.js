@@ -4,7 +4,10 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.general',
-  'myApp.science'
+  'myApp.science',
+  'myApp.entertainment',
+  'myApp.sports',
+  'myApp.business'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

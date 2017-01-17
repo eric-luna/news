@@ -1,39 +1,37 @@
 'use strict';
 
-angular.module('myApp.science', ['ngRoute'])
+angular.module('myApp.business', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/science', {
-    templateUrl: 'science/science.html',
-    controller: 'ScienceCtrl',
+  $routeProvider.when('/business', {
+    templateUrl: 'business/business.html',
+    controller: 'BusinessCtrl',
   });
 }])
 
-.controller('ScienceCtrl', ['$http', function($http) {
+.controller('BusinessCtrl', ['$http', function($http) {
 	var self=this;
-	self.source = 'new-scientist';
-	self.currentSource = 'New Scientist';
-    self.select = '#!/science';
+	self.source = 'bloomberg';
+	self.currentSource = 'Bloomberg';
+    self.select = '#!/business';
     self.currentPage = function(href){
         alert(href);
         window.location.href=href;
     } 
 
 	self.sources = [
-        {source: 'new-scientist',name:'New Scientist'},
-        {source: 'national-geographic',name:'National Geographic'},
-        {source: 'ars-technica',name:'Ars Technica'}, 
-        {source: 'engadget',name:'Engadget'}, 
-        {source: 'recode', name:'Recode' },
-        {source: 'techcrunch', name:'TechCrunch'}, 
-        {source: 'techradar',name:'Tech Radar' },
-        {source: 'the-next-web',name:'The Next Web'},
-        {source: 'the-verge', name:'The Verge'}
+        {source: 'bloomberg',name:'Bloomberg'},
+        {source: 'business-insider',name:'Business Insider'},
+        {source: 'cnbc',name:'CNBC'}, 
+        {source: 'financial-times',name:'Financial Times'}, 
+        {source: 'fortune', name:'Fortune' },
+        {source: 'the-economist', name:'The Economist' },
+        {source: 'the-wall-street-journal', name:'Wall Street Journal' },
       ];
 
     self.initial = self.sources[0].source;
 
-    self.check = 'New Scientist';
+    self.check = 'Bloomberg';
 	self.addClass = function(link){
 		self.check=link;
 	};

@@ -1,8 +1,8 @@
-<div ng-controller="GeneralCtrl as general">
+<div ng-controller="BusinessCtrl as business">
     <div class="select-menu">
         <select
-        ng-model="general.select"
-        ng-change="general.currentPage(general.select)">
+        ng-model="business.select"
+        ng-change="business.currentPage(business.select)">
             <option value="#!/general">General</option>
             <option value="#!/science">Science/Tech</option>
             <option value="#!/entertainment">Entertainment</option>
@@ -10,15 +10,15 @@
             <option value="#!/business">Business</option>
         </select>
         <select                                               
-        ng-model="general.initial"
-        ng-options="source.source as source.name for source in general.sources"
-        ng-change="general.changeSource(general.initial)"
+        ng-model="business.initial"
+        ng-options="source.source as source.name for source in business.sources"
+        ng-change="business.changeSource(business.initial)"
          ></select>
     </div>
     <div class="content">
         <div class="news-list">
-        	<h2>Top Headlines From <span>{{general.currentSource}}</span></h2>
-            <ul ng-repeat="article in general.headlines">
+        	<h2>Top Headlines From <span>{{business.currentSource}}</span></h2>
+            <ul ng-repeat="article in business.headlines">
                 <li>
                     <h3><a ng-href="{{article.url}}" target="_blank">{{article.title}}</a></h3></li>
                 <li><img ng-src="{{article.urlToImage}}"></li>
@@ -27,9 +27,9 @@
         </div>
         <div class="sources">
         	<h2>News Providers:</h2>
-            <ul ng-repeat="source in general.sources">
-                <li ng-click="general.changeSource(source.source, source.name)"
-                ng-class="general.check==='{{source.name}}' ? 'active-side' : 'none'">{{source.name}}</li>
+            <ul ng-repeat="source in business.sources">
+                <li ng-click="business.changeSource(source.source, source.name)"
+                ng-class="business.check==='{{source.name}}' ? 'active-side' : 'none'">{{source.name}}</li>
             </ul>
         </div>
     </div>

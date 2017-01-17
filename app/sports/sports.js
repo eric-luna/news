@@ -1,39 +1,35 @@
 'use strict';
 
-angular.module('myApp.science', ['ngRoute'])
+angular.module('myApp.sports', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/science', {
-    templateUrl: 'science/science.html',
-    controller: 'ScienceCtrl',
+  $routeProvider.when('/sports', {
+    templateUrl: 'sports/sports.html',
+    controller: 'SportsCtrl',
   });
 }])
 
-.controller('ScienceCtrl', ['$http', function($http) {
+.controller('SportsCtrl', ['$http', function($http) {
 	var self=this;
-	self.source = 'new-scientist';
-	self.currentSource = 'New Scientist';
-    self.select = '#!/science';
+	self.source = 'espn';
+	self.currentSource = 'ESPN';
+    self.select = '#!/sports';
     self.currentPage = function(href){
         alert(href);
         window.location.href=href;
     } 
 
 	self.sources = [
-        {source: 'new-scientist',name:'New Scientist'},
-        {source: 'national-geographic',name:'National Geographic'},
-        {source: 'ars-technica',name:'Ars Technica'}, 
-        {source: 'engadget',name:'Engadget'}, 
-        {source: 'recode', name:'Recode' },
-        {source: 'techcrunch', name:'TechCrunch'}, 
-        {source: 'techradar',name:'Tech Radar' },
-        {source: 'the-next-web',name:'The Next Web'},
-        {source: 'the-verge', name:'The Verge'}
+        {source: 'espn',name:'ESPN'},
+        {source: 'fox-sports',name:'Fox Sports'},
+        {source: 'bbc-sport',name:'BBC Sport'}, 
+        {source: 'nfl-news',name:'NFL News'}, 
+        {source: 'sky-sports-news', name:'Sky Sports News' },
       ];
 
     self.initial = self.sources[0].source;
 
-    self.check = 'New Scientist';
+    self.check = 'ESPN';
 	self.addClass = function(link){
 		self.check=link;
 	};

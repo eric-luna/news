@@ -2,7 +2,7 @@
 
 [![N|Solid](http://www.siteshotter.com/website-thumbnail/newsapi.org)](https://www.themoviedb.org/?language=en)
 
-Cinema Seeker/TV Seeker is a tool for movie and tv lovers to look up information on their favortie movies or tv shows. 
+News Junkie is a tool for people that like to stay up to date with the current events and news of the world.
 
 Features:
   - Top Headlines
