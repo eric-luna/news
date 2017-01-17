@@ -4,15 +4,14 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.general',
-  'myApp.view2',
-  'myApp.version'
+  'myApp.science'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
   $routeProvider.otherwise({redirectTo: '/general'});
 }]).controller('MainCtrl', [function(){
 	var self = this;
-	self.check = 'home';
+	self.check = '';
 	self.addClass = function(link){
 		self.check=link;
 	};

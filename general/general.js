@@ -34,15 +34,20 @@ angular.module('myApp.general', ['ngRoute'])
 
     self.initial = self.sources[0].source;
 
-    self.changeSource = function(source){
+    self.check = 'Google News';
+	self.addClass = function(link){
+		self.check=link;
+	};
+
+    self.changeSource = function(source,name){
     	$http.get('https://newsapi.org/v1/articles?source='+source+'&apiKey=22480be10ea14a548027c1172f4beee6').then(function(response) {
     		self.headlines = response.data.articles;
-    		// self.currentSource = name;
     		angular.forEach(self.sources, function(value, key) {
     			if(source === value.source){
     				self.currentSource = value.name;
     			}
 			});
+			self.addClass(name);
 		});
     }
 

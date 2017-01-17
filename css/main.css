@@ -19,6 +19,8 @@ html {
   font-size: 3em; }
   .header img {
     width: 15%; }
+  .header span {
+    color: #000; }
 
 .select-menu {
   background: #cb2027;
@@ -33,7 +35,11 @@ html {
   display: none; }
 
 .active {
-  text-decoration: none;
+  background: #fff;
+  color: #000 !important;
+  text-decoration: underline !important; }
+
+.active-side {
   background: #fff;
   color: #000 !important; }
 

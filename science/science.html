@@ -1,22 +1,22 @@
-<div ng-controller="GeneralCtrl as general">
+<div ng-controller="ScienceCtrl as science">
     <div class="select-menu">
         <select onChange="window.location.href=this.value">
             <option value="#!/general">General</option>
-            <option value="#!/view2">Science/Tech</option>
+            <option value="#!/science">Science/Tech</option>
             <option value="#!/view2">Entertainment</option>
             <option value="#!/view2">Sports</option>
             <option value="#!/view2">Business</option>
         </select>
         <select                                               
-        ng-model="general.initial"
-        ng-options="source.source as source.name for source in general.sources"
-        ng-change="general.changeSource(general.initial)"
+        ng-model="science.initial"
+        ng-options="source.source as source.name for source in science.sources"
+        ng-change="science.changeSource(science.initial)"
          ></select>
     </div>
     <div class="content">
         <div class="news-list">
-        	<h2>Top Headlines From <span>{{general.currentSource}}</span></h2>
-            <ul ng-repeat="article in general.headlines">
+        	<h2>Top Headlines From <span>{{science.currentSource}}</span></h2>
+            <ul ng-repeat="article in science.headlines">
                 <li>
                     <h3><a ng-href="{{article.url}}" target="_blank">{{article.title}}</a></h3></li>
                 <li><img ng-src="{{article.urlToImage}}"></li>
@@ -25,9 +25,9 @@
         </div>
         <div class="sources">
         	<h2>News Providers:</h2>
-            <ul ng-repeat="source in general.sources">
-                <li ng-click="general.changeSource(source.source, source.name)"
-                ng-class="general.check==='{{source.name}}' ? 'active-side' : 'none'">{{source.name}}</li>
+            <ul ng-repeat="source in science.sources">
+                <li ng-click="science.changeSource(source.source, source.name)"
+                ng-class="science.check==='{{source.name}}' ? 'active-side' : 'none'">{{source.name}}</li>
             </ul>
         </div>
     </div>

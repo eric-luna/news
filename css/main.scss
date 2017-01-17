@@ -22,6 +22,9 @@ html {
     img{
     	width: 15%;
     }
+    span{
+    	color: #000;
+    }
 }
 
 .select-menu {
@@ -40,9 +43,14 @@ html {
 }
 
 .active {
-    text-decoration: none;
     background:#fff;
     color: #000 !important;
+    text-decoration: underline !important;
+}
+
+.active-side{
+	background:#fff;
+	color:#000 !important;
 }
 
 .content {
@@ -139,19 +147,9 @@ footer {
                     display: block;
                     font-size: 1.115em;
                     padding:10px;
-                    // &:link {
-                    //     text-decoration: none;
-                    //     background: #000;
-                    //     padding: 20px;
-                    // }
                     &:visited {
                         color: #fff;
                     }
-                    // &:hover {
-                    //     color: #000;
-                    //     background: #fff;
-                    //     text-decoration: underline;
-                    // }
                 }
             }
         }
