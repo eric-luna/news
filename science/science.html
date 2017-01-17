@@ -1,11 +1,13 @@
 <div ng-controller="ScienceCtrl as science">
     <div class="select-menu">
-        <select onChange="window.location.href=this.value">
+        <select
+        ng-model="science.select"
+        ng-change="science.currentPage(science.select)">
             <option value="#!/general">General</option>
             <option value="#!/science">Science/Tech</option>
-            <option value="#!/view2">Entertainment</option>
-            <option value="#!/view2">Sports</option>
-            <option value="#!/view2">Business</option>
+            <option value="#!/entertainment">Entertainment</option>
+            <option value="#!/sports">Sports</option>
+            <option value="#!/business">Business</option>
         </select>
         <select                                               
         ng-model="science.initial"

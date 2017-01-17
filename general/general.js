@@ -13,6 +13,11 @@ angular.module('myApp.general', ['ngRoute'])
 	var self=this;
 	self.source = 'google-news';
 	self.currentSource = 'Google News';
+    self.select = '#!/general';
+    self.currentPage = function(href){
+        alert(href);
+        window.location.href=href;
+    } 
 
 	self.sources = [
         {source: 'google-news',name:'Google News'},

@@ -1,39 +1,37 @@
 'use strict';
 
-angular.module('myApp.science', ['ngRoute'])
+angular.module('myApp.entertainment', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/science', {
-    templateUrl: 'science/science.html',
-    controller: 'ScienceCtrl',
+  $routeProvider.when('/entertainment', {
+    templateUrl: 'entertainment/entertainment.html',
+    controller: 'EntertainmentCtrl',
   });
 }])
 
-.controller('ScienceCtrl', ['$http', function($http) {
+.controller('EntertainmentCtrl', ['$http', function($http) {
 	var self=this;
-	self.source = 'new-scientist';
-	self.currentSource = 'New Scientist';
-    self.select = '#!/science';
+	self.source = 'buzzfeed';
+	self.currentSource = 'Buzzfeed';
+    self.select = '#!/entertainment';
     self.currentPage = function(href){
         alert(href);
         window.location.href=href;
     } 
 
 	self.sources = [
-        {source: 'new-scientist',name:'New Scientist'},
-        {source: 'national-geographic',name:'National Geographic'},
-        {source: 'ars-technica',name:'Ars Technica'}, 
-        {source: 'engadget',name:'Engadget'}, 
-        {source: 'recode', name:'Recode' },
-        {source: 'techcrunch', name:'TechCrunch'}, 
-        {source: 'techradar',name:'Tech Radar' },
-        {source: 'the-next-web',name:'The Next Web'},
-        {source: 'the-verge', name:'The Verge'}
+        {source: 'buzzfeed',name:'Buzzfeed'},
+        {source: 'daily-mail',name:'Daily Mail'},
+        {source: 'entertainment-weekly',name:'Entertainment Weekly'},
+        {source: 'mtv-news',name:'MTV News'}, 
+        {source: 'mashable',name:'Mashable'}, 
+        {source: 'ign', name:'IGN' },
+        {source: 'polygon', name:'Polygon'}
       ];
 
     self.initial = self.sources[0].source;
 
-    self.check = 'New Scientist';
+    self.check = 'Buzzfeed';
 	self.addClass = function(link){
 		self.check=link;
 	};
