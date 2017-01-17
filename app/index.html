@@ -18,12 +18,12 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <h1 class="header">News Junkie</h1>
+  <h1 class="header">News <span>Junkie</span></h1>
 
   <div class="menu" ng-controller="MainCtrl as main">
     <ul>
         <li><a href="#!/general" ng-click="main.addClass('home')" ng-class="main.check==='home' ? 'active' : 'none'">General</a></li>
-        <li><a href="#!/view2" ng-click="main.addClass('science')" ng-class="main.check==='science' ? 'active' : 'none'">Science/Tech</a></li>
+        <li><a href="#!/science" ng-click="main.addClass('science')" ng-class="main.check==='science' ? 'active' : 'none'">Science/Tech</a></li>
         <li><a href="#!/view2" ng-click="main.addClass('entertainment')" ng-class="main.check==='entertainment' ? 'active' : 'none'">Entertainment</a></li>
         <li><a href="#!/view2" ng-click="main.addClass('sports')" ng-class="main.check==='sports' ? 'active' : 'none'">Sports</a></li>
         <li><a href="#!/view2" ng-click="main.addClass('business')" ng-class="main.check==='business' ? 'active' : 'none'">Business</a></li>
@@ -49,9 +49,7 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="general/general.js"></script>
+  <script src="science/science.js"></script>
   <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>
