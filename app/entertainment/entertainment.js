@@ -15,7 +15,6 @@ angular.module('myApp.entertainment', ['ngRoute'])
 	self.currentSource = 'Buzzfeed';
     self.select = '#!/entertainment';
     self.currentPage = function(href){
-        alert(href);
         window.location.href=href;
     } 
 

@@ -15,7 +15,6 @@ angular.module('myApp.general', ['ngRoute'])
 	self.currentSource = 'Google News';
     self.select = '#!/general';
     self.currentPage = function(href){
-        alert(href);
         window.location.href=href;
     } 
 
