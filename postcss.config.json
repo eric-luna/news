@@ -1,6 +1,7 @@
 {
   "use": [
-    "autoprefixer"
+    "autoprefixer",
+    "cssnano"
   ],
   "input": "app/css/src.css",
   "output": "app/css/main.css",
