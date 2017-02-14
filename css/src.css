@@ -54,10 +54,12 @@ html {
 .content {
   display: flex;
   flex-direction: row;
-  background: #fff; }
+  background: #fff;
+  height: 700px; }
   .content .news-list {
     width: 100%;
-    padding: 40px 0; }
+    padding: 40px 0;
+    overflow: scroll; }
     .content .news-list h2 {
       margin: auto;
       text-align: center;

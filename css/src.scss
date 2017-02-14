@@ -68,9 +68,11 @@ html {
     display: flex;
     flex-direction: row;
     background: #fff;
+    height: 700px;
     .news-list {
         width: 100%;
         padding: 40px 0;
+        overflow: scroll;
         h2 {
             margin: auto;
             text-align: center;
