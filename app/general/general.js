@@ -54,10 +54,7 @@ angular.module('myApp.general', ['ngRoute'])
 			self.addClass(name);
 		});
     }
-
-	$http.get('https://newsapi.org/v1/articles?source='+self.sources[0].source+'&apiKey=22480be10ea14a548027c1172f4beee6').then(function(response) {
+    $http.get('https://newsapi.org/v1/articles?source='+self.sources[0].source+'&apiKey=22480be10ea14a548027c1172f4beee6').then(function(response) {
     	self.headlines = response.data.articles;
 	});
-
-	
 }]);
